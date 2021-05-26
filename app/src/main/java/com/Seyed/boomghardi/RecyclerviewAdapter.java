@@ -1,6 +1,7 @@
 package com.Seyed.boomghardi;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.List;
 
 public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapter.ViewHolder> {
 
+    Typeface typeface;
     private Context context;
     private List<ModelBoomGardi> mData;
 
@@ -37,7 +39,8 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull RecyclerviewAdapter.ViewHolder holder, int position) {
-
+        typeface = Typeface.createFromAsset(context.getAssets(), "");
+        holder.Txtstar.setTypeface(typeface);
         holder.txt_title.setText(mData.get(position).getTitle());
         holder.Img_item.setImageResource(mData.get(position).getThumbnail());
         holder.txt_item2.setText(mData.get(position).getCategory());
@@ -57,14 +60,16 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-
-        TextView txt_title,txt_item2;
+        Typeface typeface;
+        TextView txt_title, txt_item2, Txtstar;
         ImageView Img_item;
         CardView cardView;
+
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
 
-            txt_item2= (TextView) itemView.findViewById(R.id.txt_item2);
+            Txtstar = (TextView) itemView.findViewById(R.id.Txtstar);
+            txt_item2 = (TextView) itemView.findViewById(R.id.txt_item2);
             txt_title = (TextView) itemView.findViewById(R.id.txt_title);
             Img_item = (ImageView) itemView.findViewById(R.id.Img_item);
             cardView = (CardView) itemView.findViewById(R.id.Cardview_item);
