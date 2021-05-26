@@ -6,8 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -36,8 +38,16 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
     @Override
     public void onBindViewHolder(@NonNull @NotNull RecyclerviewAdapter.ViewHolder holder, int position) {
 
-        holder.txt_item.setText(mData.get(position).getTitle());
+        holder.txt_title.setText(mData.get(position).getTitle());
         holder.Img_item.setImageResource(mData.get(position).getThumbnail());
+        holder.txt_item2.setText(mData.get(position).getCategory());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
     }
 
@@ -48,13 +58,16 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView txt_item;
+        TextView txt_title,txt_item2;
         ImageView Img_item;
+        CardView cardView;
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
 
-            txt_item = (TextView) itemView.findViewById(R.id.txt_item);
+            txt_item2= (TextView) itemView.findViewById(R.id.txt_item2);
+            txt_title = (TextView) itemView.findViewById(R.id.txt_title);
             Img_item = (ImageView) itemView.findViewById(R.id.Img_item);
+            cardView = (CardView) itemView.findViewById(R.id.Cardview_item);
         }
     }
 

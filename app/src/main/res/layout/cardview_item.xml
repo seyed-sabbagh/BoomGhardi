@@ -1,32 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="120dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Cardview_item"
+    android:layout_width="150dp"
+    android:layout_height="200dp"
     android:layout_margin="5dp"
-    app:cardCornerRadius="4dp"
-    android:layout_height="190dp">
+    app:cardCornerRadius="4dp">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:id="@+id/Img_item"
-        android:layout_height="160dp"
-        android:scaleType="centerCrop"
-        android:background="#2d2d2d"/>
-
-    <TextView
-        android:id="@+id/txt_item"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="15sp"
-        android:gravity="center"
-        android:textColor="#2d2d2d"
-        android:text="book"/>
+        android:orientation="vertical">
 
-</LinearLayout>
+
+        <ImageView
+            android:id="@+id/Img_item"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#2d2d2d"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="book"
+            android:textColor="#2d2d2d"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="book"
+            android:textColor="#2d2d2d"
+            android:textSize="15sp" />
+
+    </LinearLayout>
 </androidx.cardview.widget.CardView>
