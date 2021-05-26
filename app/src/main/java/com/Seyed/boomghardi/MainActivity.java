@@ -21,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        typeface = Typeface.createFromAsset(getAssets(), "shazdemosafer.ttf");
+        typeface2 = Typeface.createFromAsset(getAssets(), "Shazdemosafer2.ttf");
+        Txtstar.setTypeface(typeface);
+        Txtstar.setTypeface(typeface2);
+
         GridList();
         TypeFace();
         FindViewById();
@@ -46,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void FindViewById() {
-//        Txtstar = findViewById(R.id.Txtstar);
+        Txtstar = findViewById(R.id.Txtstar);
 //        Txtstar2 = findViewById(R.id.Txtstar2);
 //        Txtstar3 = findViewById(R.id.Txtstar3);
 //        Txtstar4 = findViewById(R.id.Txtstar4);
@@ -54,9 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void TypeFace() {
-        typeface = Typeface.createFromAsset(getAssets(), "shazdemosafer.ttf");
-        typeface2 = Typeface.createFromAsset(getAssets(), "Shazdemosafer2.ttf");
-//        Txtstar.setTypeface(typeface2);
+
 
     }
 }
