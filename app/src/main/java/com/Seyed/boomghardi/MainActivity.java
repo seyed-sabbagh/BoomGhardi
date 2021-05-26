@@ -31,13 +31,10 @@ public class MainActivity extends AppCompatActivity {
 
         gardiList = new ArrayList<>();
 
-        gardiList.add(new ModelBoomGardi("txt1", "txt2", "txt3", R.drawable.gradient_black));
-        gardiList.add(new ModelBoomGardi("txt1", "txt2", "txt3", R.drawable.gradient_black));
-        gardiList.add(new ModelBoomGardi("txt1", "txt2", "txt3", R.drawable.gradient_black));
-        gardiList.add(new ModelBoomGardi("txt1", "txt2", "txt3", R.drawable.gradient_black));
-        gardiList.add(new ModelBoomGardi("txt1", "txt2", "txt3", R.drawable.gradient_black));
-        gardiList.add(new ModelBoomGardi("txt1", "txt2", "txt3", R.drawable.gradient_black));
-        gardiList.add(new ModelBoomGardi("txt1", "txt2", "txt3", R.drawable.gradient_black));
+        gardiList.add(new ModelBoomGardi("هتل کوروش شاندیز", "0 نقدر", "", R.drawable.imgslider1));
+        gardiList.add(new ModelBoomGardi("TestText", "TestText", "", R.drawable.gradient_black));
+        gardiList.add(new ModelBoomGardi("TestText", "TestText", "", R.drawable.gradient_black));
+        gardiList.add(new ModelBoomGardi("هتل کوروش شاندیز", "0 نقدر", "", R.drawable.imgslider1));
 
         RecyclerView recyclerView = findViewById(R.id.RecyclerView);
         RecyclerviewAdapter adapter = new RecyclerviewAdapter(this, gardiList);

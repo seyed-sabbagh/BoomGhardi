@@ -2,11 +2,10 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/Cardview_item"
-    android:layout_width="150dp"
-    android:layout_height="230dp"
+    android:layout_width="160dp"
+    android:layout_height="250dp"
     android:layout_margin="5dp"
     app:cardCornerRadius="4dp">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,26 +24,37 @@
         <TextView
             android:id="@+id/txt_title"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/iransans"
             android:gravity="center"
-            android:text="book"
+            android:text="Title"
             android:textColor="#2d2d2d"
-            android:textSize="15sp"
+            android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Img_item" />
 
         <TextView
             android:id="@+id/txt_item2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="book"
+            android:layout_height="15dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/iransans"
+            android:text="نقد"
             android:textColor="#2d2d2d"
-            android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
 
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_title">
@@ -54,10 +64,71 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/ic_star_web"
-                android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textColor="@color/greean_web"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/Txtstar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_star_web"
+                android:textColor="@color/greean_web"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/Txtstar3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_star_web"
+                android:textColor="@color/greean_web"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/Txtstar4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_star_web"
+                android:textColor="@color/greean_web"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/Txtstar5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_star_web"
+                android:textColor="@color/greean_web"
+                android:textSize="15sp" />
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_city"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/iransans"
+            android:gravity="center"
+            android:text="استان : "
+            android:textColor="#2d2d2d"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <TextView
+            android:id="@+id/txt_city2"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:fontFamily="@font/iransans"
+            android:gravity="center"
+            android:text="شهر : "
+            android:textColor="#2d2d2d"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_city"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_city" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

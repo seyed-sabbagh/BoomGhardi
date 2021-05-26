@@ -39,8 +39,12 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull RecyclerviewAdapter.ViewHolder holder, int position) {
-        typeface = Typeface.createFromAsset(context.getAssets(), "");
+        typeface = Typeface.createFromAsset(context.getAssets(), "shazdemosafer.ttf");
         holder.Txtstar.setTypeface(typeface);
+        holder.Txtstar2.setTypeface(typeface);
+        holder.Txtstar3.setTypeface(typeface);
+        holder.Txtstar4.setTypeface(typeface);
+        holder.Txtstar5.setTypeface(typeface);
         holder.txt_title.setText(mData.get(position).getTitle());
         holder.Img_item.setImageResource(mData.get(position).getThumbnail());
         holder.txt_item2.setText(mData.get(position).getCategory());
@@ -61,7 +65,7 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         Typeface typeface;
-        TextView txt_title, txt_item2, Txtstar;
+        TextView txt_title, txt_item2, Txtstar,Txtstar2,Txtstar3,Txtstar4,Txtstar5;
         ImageView Img_item;
         CardView cardView;
 
@@ -69,6 +73,10 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
             super(itemView);
 
             Txtstar = (TextView) itemView.findViewById(R.id.Txtstar);
+            Txtstar2 = (TextView) itemView.findViewById(R.id.Txtstar2);
+            Txtstar3 = (TextView) itemView.findViewById(R.id.Txtstar3);
+            Txtstar4 = (TextView) itemView.findViewById(R.id.Txtstar4);
+            Txtstar5 = (TextView) itemView.findViewById(R.id.Txtstar5);
             txt_item2 = (TextView) itemView.findViewById(R.id.txt_item2);
             txt_title = (TextView) itemView.findViewById(R.id.txt_title);
             Img_item = (ImageView) itemView.findViewById(R.id.Img_item);
