@@ -20,6 +20,7 @@
                 android:layout_height="300dp"
                 android:layout_alignParentTop="true">
 
+
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
@@ -33,7 +34,7 @@
                     android:id="@+id/rel"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:alpha="0.8"
+                    android:alpha="0.6"
                     android:background="@drawable/gradient_black" />
 
                 <TextView
@@ -57,4 +58,44 @@
                 android:layout_margin="15dp" />
         </RelativeLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent_bg_buttom_right"
+            android:backgroundTint="@color/white"
+            android:drawableEnd="@drawable/ic_moratabsazi"
+            android:fontFamily="@font/iransans"
+            android:padding="15dp"
+            android:text="مرتب سازی"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:alpha="0.3"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/btnFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent_bg_buttom_left"
+            android:backgroundTint="@color/white"
+            android:drawableEnd="@drawable/ic_setting"
+            android:fontFamily="@font/iransans"
+            android:padding="15dp"
+            android:text="اعمال فیلتر"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 </RelativeLayout>

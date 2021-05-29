@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BoomGhardi</string>
     <string name="ic_star_web">"\uE00D"</string>
+    <string name="ic_location">"\uE019"</string>
 </resources>

@@ -14,6 +14,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -41,6 +42,7 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
     public void onBindViewHolder(@NonNull @NotNull RecyclerviewAdapter.ViewHolder holder, int position) {
         typeface = Typeface.createFromAsset(context.getAssets(), "shazdemosafer.ttf");
         holder.Txtstar.setTypeface(typeface);
+        holder.Txtlocation.setTypeface(typeface);
         holder.Txtstar2.setTypeface(typeface);
         holder.Txtstar3.setTypeface(typeface);
         holder.Txtstar4.setTypeface(typeface);
@@ -65,13 +67,13 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         Typeface typeface;
-        TextView txt_title, txt_item2, Txtstar,Txtstar2,Txtstar3,Txtstar4,Txtstar5;
+        TextView txt_title, txt_item2, Txtstar,Txtstar2,Txtstar3,Txtstar4,Txtstar5,Txtlocation;
         ImageView Img_item;
         CardView cardView;
 
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
-
+            Txtlocation = (TextView) itemView.findViewById(R.id.txt_location);
             Txtstar = (TextView) itemView.findViewById(R.id.Txtstar);
             Txtstar2 = (TextView) itemView.findViewById(R.id.Txtstar2);
             Txtstar3 = (TextView) itemView.findViewById(R.id.Txtstar3);
