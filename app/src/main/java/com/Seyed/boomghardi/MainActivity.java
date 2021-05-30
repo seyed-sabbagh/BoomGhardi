@@ -2,25 +2,31 @@ package com.Seyed.boomghardi;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     Typeface typeface, typeface2;
-    Button btnFilter;
+    Button btnFilter, btnMoratabsazi,buttontest;
     TextView Txtstar, Txtstar2, Txtstar3, Txtstar4, Txtstar5, txt_title, txt_item2;
-
     List<ModelBoomGardi> gardiList;
+    CheckBox chck_hotel;
+    private BottomSheetDialog bottomsheetdialogmoratabsazi, bottomsheetdialofilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +36,34 @@ public class MainActivity extends AppCompatActivity {
         TypeFace();
         FindViewById();
 
+
+        btnMoratabsazi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bottomsheetdialogmoratabsazi = new BottomSheetDialog(MainActivity.this, R.style.BottomSheetTheme);
+
+                View sheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.bottomsheetdialogmoratabsazi,
+                        (ViewGroup) findViewById(R.id.buttonSheets));
+
+                bottomsheetdialogmoratabsazi.setContentView(sheetView);
+                bottomsheetdialogmoratabsazi.show();
+
+            }
+        });
         btnFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BottomSheet  bottomSheet = new BottomSheet();
-                bottomSheet.show(getSupportFragmentManager(),"TAG");
+
+                bottomsheetdialofilter = new BottomSheetDialog(MainActivity.this, R.style.BottomSheetTheme);
+
+                View sheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.bottomsheetdialogfilter,
+                        (ViewGroup) findViewById(R.id.buttonSheets));
+
+
+
+                bottomsheetdialofilter.setContentView(sheetView);
+                bottomsheetdialofilter.show();
+
             }
         });
 
@@ -62,6 +91,9 @@ public class MainActivity extends AppCompatActivity {
     private void FindViewById() {
         Txtstar = findViewById(R.id.Txtstar);
         btnFilter = findViewById(R.id.btnFilter);
+        btnMoratabsazi = findViewById(R.id.btnMoratabsazi);
+        chck_hotel = findViewById(R.id.chck_hotel);
+        buttontest = findViewById(R.id.buttontest);
 //        Txtstar2 = findViewById(R.id.Txtstar2);
 //        Txtstar3 = findViewById(R.id.Txtstar3);
 //        Txtstar4 = findViewById(R.id.Txtstar4);
