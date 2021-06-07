@@ -2,14 +2,12 @@ package com.Seyed.boomghardi;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -22,7 +20,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     Typeface typeface, typeface2;
-    Button btnFilter, btnMoratabsazi,buttontest;
+    Button btnFilter, btnMoratabsazi, buttontest;
     TextView Txtstar, Txtstar2, Txtstar3, Txtstar4, Txtstar5, txt_title, txt_item2;
     List<ModelBoomGardi> gardiList;
     CheckBox chck_hotel;
@@ -37,34 +35,26 @@ public class MainActivity extends AppCompatActivity {
         FindViewById();
 
 
-        btnMoratabsazi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bottomsheetdialogmoratabsazi = new BottomSheetDialog(MainActivity.this, R.style.BottomSheetTheme);
+        btnMoratabsazi.setOnClickListener(v -> {
+            bottomsheetdialogmoratabsazi = new BottomSheetDialog(MainActivity.this, R.style.BottomSheetTheme);
 
-                View sheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.bottomsheetdialogmoratabsazi,
-                        (ViewGroup) findViewById(R.id.buttonSheets));
+            View sheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.bottomsheetdialogmoratabsazi,
+                    (ViewGroup) findViewById(R.id.buttonSheets));
 
-                bottomsheetdialogmoratabsazi.setContentView(sheetView);
-                bottomsheetdialogmoratabsazi.show();
+            bottomsheetdialogmoratabsazi.setContentView(sheetView);
+            bottomsheetdialogmoratabsazi.show();
 
-            }
         });
-        btnFilter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnFilter.setOnClickListener(v -> {
 
-                bottomsheetdialofilter = new BottomSheetDialog(MainActivity.this, R.style.BottomSheetTheme);
+            bottomsheetdialofilter = new BottomSheetDialog(MainActivity.this, R.style.BottomSheetTheme);
 
-                View sheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.bottomsheetdialogfilter,
-                        (ViewGroup) findViewById(R.id.buttonSheets));
+            View sheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.bottomsheetdialogfilter,
+                    (ViewGroup) findViewById(R.id.buttonSheets));
 
+            bottomsheetdialofilter.setContentView(sheetView);
+            bottomsheetdialofilter.show();
 
-
-                bottomsheetdialofilter.setContentView(sheetView);
-                bottomsheetdialofilter.show();
-
-            }
         });
 
     }
